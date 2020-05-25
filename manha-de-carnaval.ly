@@ -58,13 +58,19 @@ dHarmony = { d8\5 <c'\3 f'\2> r <c'\3 f'\2> }
 gHarmony = { g,8 <b\3 d'\2> r <b\3 d'\2> }
 cHarmony = { c8 <g\4 b\3> r <g\4 b\3> }
 cisHarmony = { cis8 <g\4 b\3> r <g\4 b\3> }
-amajHarmony = { a,8\6 <g\4 cis'\3 e'\2> r <g\4 cis'\3> }
+amajHarmony = { a,8\6 <g\4 cis'\3> r <g\4 cis'\3> }
 dHarmonyB = { d8\5 <c'\3 f'\2> r r d8\5 <f\4 c'\3> r <f\4 c'\3> }
 gHarmonyB = { g,8 <f b\3 d'\2> r <f b\3 d'\2> g,8 <f b\3> r <f b\3> }
 cHarmonyB = { c8 <e g c'> r r c <e a> r <e a> }
 fHarmony = { f,8 <e a c'> r <e a c'> f, <d a> r <a c'> }
 bHarmonyC = { b,8 <f a> r r b,8 <f a> r <f a> }
 eHarmonyC = { e,8 <d\5 gis\4 b\3> r <d\5 gis\4 b\3> e, <d\5 gis\4> r <d\5 gis\4> }
+eHarmonyD = { e8\5 <d'\3 g'\2> r <d'\3 g'\2> }
+dWalkHarmony = { d8\5 <a\4 d'\3 f'\2> r <a\4 d'\3 f'\2>
+                 d\5 <a\4 cis'\3 f'\2> r <a\4 cis'\3 f'\2>
+                 d\5 <a\4 c'\3 f'\2> r <a\4 c'\3 f'\2>
+               }
+
 
 harmony = {
   \time 4/4
@@ -95,20 +101,47 @@ harmony = {
 
   \aHarmonyB \aHarmonyB
   \bHarmonyB \eHarmonyB
+
+  \eHarmonyD \eHarmonyD
+  \amajHarmony \amajHarmony
+  \dWalkHarmony
 }
 
-chordsA = \chordmode { a1:m7 b2:m7.5- e2:7 }
-%% FIXME e:m9 is minor 7 major 9, really needs to be minor 7 minor (flat) 9
-chordsC = \chordmode { a1:m7 d2:m7 g2:7 c1:maj7 cis2:dim7 a2:7 d1:m7 g1:7 c1:6 f1:maj7 b:m7.5- e:m9 }
+beChords = \chordmode { b2:m7.5- e:7 } % TODO e:m7 -> e minor 7 flat 9
+beChordsLong = \chordmode { b1:m7.5- e:7 } % TODO e:m7 -> e minor 7 flat 9
+chordsA = \chordmode { a1:m7 \beChords }
+chordsB = \chordmode { a1:m7
+                       d2:m7 g2:7
+                       c1:maj7
+                       cis2:dim7 a2:7
+                       d1:m7
+                       g:7
+                       c:6
+                       f:maj7
+                       \beChordsLong } % TODO e:m7 -> e minor 7 flat 9
+chordsC = \chordmode { e1:m7.5-
+                       a:7 }
+%% just coincidence that this ended up being D, it is for the chord of d minor
+chordsDWalk = \chordmode { d2:m d2:m7+
+                           d1:m7 }
+chordsDRootWalk = \chordmode { d2:m7 d:m7/c }
+chordsARootWalk = \chordmode { a2:m g:m/g }
 
 harmonyChords = {
   \set minorChordModifier = \markup { "-" }
   \partial 4 s4
   \chordsA
   \chordsA
+  \chordsB
+  \chordsA
+  \chordsA
+  \chordsA
   \chordsC
-  \chordsA
-  \chordsA
+  \chordsDWalk
+  \chordsDRootWalk
+  \beChords
+  \chordsARootWalk
+  \beChordsLong
   \chordsA
 }
 
