@@ -15,9 +15,21 @@ caMelody = { e'1\2( e'2\2) r8 e'\2 f'\2 g'\2 } % two
 dMelody  = { a'4. d'8 d'2 } % one
 gMelody  = { r2 r8 d' e'\2 f'\2 } % one
 cMelody  = { g'4. c'8 c'2 } % one
-fMelody  = { r2 r8 c' d' e' } % one
+fmajMelody  = { r2 r8 c' d' e' } % one
 bMelody  = { f'4. b8 b2 } % one
 eMelody  = { r2 r8 b\3 cis'\3 d'\3 }
+eadMelody = { ais'2. a'8 g'8\2
+              g2'\2 r8 r f'\2 e'\2
+              a'1
+              r2 r4 d'4}
+dWalkMelody = { d'2. e'8\2 f'8\2 }
+beHighMelody = { b'1 }
+aWalkMelody = { r4 c' c' d'8 e' }
+fMelody = { a'2. gis'4 }
+beMelodyB = { e'1
+              r2 e'4 gis'8 b'8 }
+aEndMelody = { a'1 }
+beEndMelody = { r2. e'4 }
 
 melody = {
   \time 4/4
@@ -34,7 +46,7 @@ melody = {
   \dMelody
   \gMelody
   \cMelody
-  \fMelody
+  \fmajMelody
   \bMelody
   \eMelody
 
@@ -44,6 +56,17 @@ melody = {
   \beMelody
 
   \abeMelody
+
+  \eadMelody
+  \dWalkMelody
+  \beHighMelody
+  \aWalkMelody
+  \fMelody
+  \beMelodyB
+
+  \aEndMelody
+  \beEndMelody
+
 }
 
 aHarmonyA = { a,8\6 <c'\3 e'\2> r <c'\3 e'\2> }
@@ -65,7 +88,7 @@ cHarmonyB = { c8 <e g c'> r r c <e a> r <e a> }
 fmajHarmony = { f,8 <e a c'> r <e a c'> f, <d a> r <a c'> }
 bHarmonyC = { b,8 <f a> r r b,8 <f a> r <f a> }
 eHarmonyC = { e,8 <d\5 gis\4 b\3> r <d\5 gis\4 b\3> e, <d\5 gis\4> r <d\5 gis\4> }
-eHarmonyD = { e8\5 <d'\3 g'\2> r <d'\3 g'\2> }
+eHarmonyD = { e8\5 <d'\3 g'\2> r <d'\3> }
 dWalkHarmony = { d8\5 <a\4 d'\3 f'\2> r <a\4 d'\3 f'\2>
                  d\5 <a\4 cis'\3 f'\2> r <a\4 cis'\3 f'\2>
                  d\5 <a\4 c'\3 f'\2> r <a\4 c'\3 f'\2>
