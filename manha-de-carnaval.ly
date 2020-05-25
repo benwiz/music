@@ -16,6 +16,8 @@ dMelody  = { a'4. d'8 d'2 } % one
 gMelody  = { r2 r8 d'8 e'8\2 f'8\2 } % one
 cMelody  = { g'4. c'8 c'2 } % one
 fMelody  = { r2 r8 c' d' e' } % one
+bMelody  = { f'4. b8 b2 } % one
+eMelody  = { r2 r8 b\3 cis'\3 d'\3 }
 
 melody = {
   \time 4/4
@@ -31,6 +33,8 @@ melody = {
   \gMelody
   \cMelody
   \fMelody
+  \bMelody
+  \eMelody
 }
 
 aHarmonyA = { a,8\6 <c'\3 e'\2> r <c'\3 e'\2> }
@@ -50,6 +54,8 @@ dHarmonyB = { d8\5 <c'\3 f'\2> r r d8\5 <f\4 c'\3> r <f\4 c'\3> }
 gHarmonyB = { g,8 <f b\3 d'\2> r <f b\3 d'\2> g,8 <f b\3> r <f b\3> }
 cHarmonyB = { c8 <e g c'> r r c <e a> r <e a> }
 fHarmony = { f,8 <e a c'> r <e a c'> f, <d a> r <a c'> }
+bHarmonyC = { b,8 <f a> r r b,8 <f a> r <f a> }
+eHarmonyC = { e,8 <d\5 gis\4 b\3> r <d\5 gis\4 b\3> e, <d\5 gis\4> r <d\5 gis\4> }
 
 harmony = {
   \time 4/4
@@ -67,10 +73,12 @@ harmony = {
   \gHarmonyB
   \cHarmonyB
   \fHarmony
+  \bHarmonyC
+  \eHarmonyC
 }
 
 chordsA = \chordmode { a1:m7 b2:m7.5- e2:7 }
-chordsC = \chordmode { a1:m7 d2:m7 g2:7 c1:maj7 cis2:dim7 a2:7 d1:m7 g1:7 c1:6 f1:maj7 }
+chordsC = \chordmode { a1:m7 d2:m7 g2:7 c1:maj7 cis2:dim7 a2:7 d1:m7 g1:7 c1:6 f1:maj7 b:m7.5- e:m9 }
 
 harmonyChords = {
   \set minorChordModifier = \markup { "-" }
