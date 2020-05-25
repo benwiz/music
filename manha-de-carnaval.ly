@@ -13,7 +13,9 @@ dgMelody = { a'2. g'8 b'8 } % one
 abMelody = { e'1( e'2.) e'4 } % two
 caMelody = { e'1\2( e'2\2 e'8\2) e'8\2 f'8\2 g'8\2 } % two
 dMelody  = { a'4. d'8 d'2 } % one
-gMelody  = { r2 r8 d'8 e'8 f'8 } % one
+gMelody  = { r2 r8 d'8 e'8\2 f'8\2 } % one
+cMelody  = { g'4. c'8 c'2 } % one
+fMelody  = { r2 r8 c' d' e' } % one
 
 melody = {
   \time 4/4
@@ -27,6 +29,8 @@ melody = {
   \caMelody
   \dMelody
   \gMelody
+  \cMelody
+  \fMelody
 }
 
 aHarmonyA = { a,8\6 <c'\3 e'\2> r <c'\3 e'\2> }
@@ -44,6 +48,8 @@ cisHarmony = { cis8 <g\4 b\3> r <g\4 b\3> }
 amajHarmony = { a,8\6 <g\4 cis'\3 e'\2> r <g\4 cis'\3> }
 dHarmonyB = { d8\5 <c'\3 f'\2> r r d8\5 <f\4 c'\3> r <f\4 c'\3> }
 gHarmonyB = { g,8 <f b\3 d'\2> r <f b\3 d'\2> g,8 <f b\3> r <f b\3> }
+cHarmonyB = { c8 <e g c'> r r c <e a> r <e a> }
+fHarmony = { f,8 <e a c'> r <e a c'> f, <d a> r <a c'> }
 
 harmony = {
   \time 4/4
@@ -58,7 +64,9 @@ harmony = {
   \cHarmony \cHarmony
   \cisHarmony \amajHarmony
   \dHarmonyB
-  \gHarmonyB \gHarmonyB
+  \gHarmonyB
+  \cHarmonyB
+  \fHarmony
 }
 
 chordsA = \chordmode { a1:m7 b2:m7.5- e2:7 }
@@ -71,6 +79,7 @@ harmonyChords = {
   \chordsA
   \chordsC
 }
+
 
 \score {
   \layout { \omit Voice.StringNumber }
