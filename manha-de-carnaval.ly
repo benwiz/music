@@ -199,6 +199,11 @@ chordsDWalk = \chordmode { d2:m d2:m7+
 chordsDRootWalk = \chordmode { d2:m7 d:m7/c }
 chordsARootWalk = \chordmode { a2:m a:m/g }
 chordsF = \chordmode { f1:7 }
+codaChords = \chordmode { a1:m7
+                          d2:m7 a:m7
+                          d:m7 a:m7
+                          d:m7 e:m7
+                          a1:m6 }
 
 harmonyChords = {
   \set minorChordModifier = \markup { "-" }
@@ -217,6 +222,7 @@ harmonyChords = {
   \chordsF
   \beChordsLong
   \chordsA
+  \codaChords
 }
 
 
