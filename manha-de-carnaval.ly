@@ -1,19 +1,28 @@
 \version "2.20.0"
 
-aMelodyA = { c''2. b'8 a'8 } % one measure
-beMelodyA = { a'2. gis'8 b'8 } % one
-dgMelodyA = { a'2. g'8 b'8 } % one
-abMelody = { e'1( e'2.) e'4 } % two
+\header {
+  title = "Manhã de Carnaval"
+  composer = "Composed by Luiz Bonfá"
+  arranger = "Arranged by Ben Wisialowski"
+  tagline = ##f
+}
 
+aMelody = { c''2. b'8 a'8 } % one measure
+beMelody = { a'2. gis'8 b'8 } % one
+dgMelody = { a'2. g'8 b'8 } % one
+abMelody = { e'1( e'2.) e'4 } % two
+caMelody = { e'1\2( e'2\2 e'8\2) e'8\2 f'8\2 g'8\2 } % two
 
 melody = {
   \time 4/4
   \voiceOne
   \partial 4 e'4\2
-  \aMelodyA
-  \beMelodyA
+  \aMelody
+  \beMelody
   \abMelody
-  \aMelodyA
+  \aMelody
+  \dgMelody
+  \caMelody
 }
 
 %% For now, harmonies are all half measures
@@ -25,6 +34,12 @@ aHarmonyB = { a,8\6 <g c'\3 e'\2> r <g c'\3 e'\2> }
 bHarmonyB = { b,8 <f a d'> r <f a d'> }
 eHarmonyB = { e,8 <b d'> r <b d'> }
 
+dHarmony = { d8\5 <c'\3 f'\2> r <c'\3 f'\2> }
+gHarmony = { g,8 <b\3 d'\2> r <b\3 d'\2> }
+cHarmony = { c8 <g\4 b\3> r <g\4 b\3> }
+cisHarmony = { cis8 <g\4 b\3> r <g\4 b\3> }
+amajHarmony = { a,8\6 <g\4 cis'\3 e'\2> r <g\4 cis'\3> }
+
 harmony = {
   \time 4/4
   \voiceTwo
@@ -34,15 +49,20 @@ harmony = {
   \aHarmonyB \aHarmonyB
   \bHarmonyB \eHarmonyB % \break
   \aHarmonyA \aHarmonyA
+  \dHarmony \gHarmony
+  \cHarmony \cHarmony
+  \cisHarmony \amajHarmony
 }
 
 chordsA = \chordmode { a1:m7 b2:m7.5- e2:7 }
+chordsC = \chordmode { a1:m7 d2:m7 g2:7 c1:maj7 cis2:dim7 a2:7 }
 
 harmonyChords = {
   \set minorChordModifier = \markup { "-" }
   \partial 4 s4
   \chordsA
   \chordsA
+  \chordsC
 }
 
 \score {
