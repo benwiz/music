@@ -7,11 +7,13 @@
   tagline = ##f
 }
 
-aMelody = { c''2. b'8 a'8 } % one measure
+aMelody  = { c''2. b'8 a'8 } % one measure
 beMelody = { a'2. gis'8 b'8 } % one
 dgMelody = { a'2. g'8 b'8 } % one
 abMelody = { e'1( e'2.) e'4 } % two
 caMelody = { e'1\2( e'2\2 e'8\2) e'8\2 f'8\2 g'8\2 } % two
+dMelody  = { a'4. d'8 d'2 } % one
+gMelody  = { r2 r8 d'8 e'8 f'8 } % one
 
 melody = {
   \time 4/4
@@ -23,9 +25,10 @@ melody = {
   \aMelody
   \dgMelody
   \caMelody
+  \dMelody
+  \gMelody
 }
 
-%% For now, harmonies are all half measures
 aHarmonyA = { a,8\6 <c'\3 e'\2> r <c'\3 e'\2> }
 bHarmonyA = { b,8\6 <d'\3 f'\2> r <d'\3 f'\2> }
 eHarmonyA = { e,8 <b\3 d'\2> r <d'\3 f'\2> }
@@ -39,6 +42,8 @@ gHarmony = { g,8 <b\3 d'\2> r <b\3 d'\2> }
 cHarmony = { c8 <g\4 b\3> r <g\4 b\3> }
 cisHarmony = { cis8 <g\4 b\3> r <g\4 b\3> }
 amajHarmony = { a,8\6 <g\4 cis'\3 e'\2> r <g\4 cis'\3> }
+dHarmonyB = { d8\5 <c'\3 f'\2> r r d8\5 <f\4 c'\3> r <f\4 c'\3> }
+gHarmonyB = { g,8 <f b\3 d'\2> r <f b\3 d'\2> g,8 <f b\3> r <f b\3> }
 
 harmony = {
   \time 4/4
@@ -52,10 +57,12 @@ harmony = {
   \dHarmony \gHarmony
   \cHarmony \cHarmony
   \cisHarmony \amajHarmony
+  \dHarmonyB
+  \gHarmonyB \gHarmonyB
 }
 
 chordsA = \chordmode { a1:m7 b2:m7.5- e2:7 }
-chordsC = \chordmode { a1:m7 d2:m7 g2:7 c1:maj7 cis2:dim7 a2:7 }
+chordsC = \chordmode { a1:m7 d2:m7 g2:7 c1:maj7 cis2:dim7 a2:7 d1:m7 g1:7 c1:6 f1:maj7 }
 
 harmonyChords = {
   \set minorChordModifier = \markup { "-" }
