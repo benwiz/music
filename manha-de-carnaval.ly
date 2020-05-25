@@ -62,15 +62,21 @@ amajHarmony = { a,8\6 <g\4 cis'\3> r <g\4 cis'\3> }
 dHarmonyB = { d8\5 <c'\3 f'\2> r r d8\5 <f\4 c'\3> r <f\4 c'\3> }
 gHarmonyB = { g,8 <f b\3 d'\2> r <f b\3 d'\2> g,8 <f b\3> r <f b\3> }
 cHarmonyB = { c8 <e g c'> r r c <e a> r <e a> }
-fHarmony = { f,8 <e a c'> r <e a c'> f, <d a> r <a c'> }
+fmajHarmony = { f,8 <e a c'> r <e a c'> f, <d a> r <a c'> }
 bHarmonyC = { b,8 <f a> r r b,8 <f a> r <f a> }
 eHarmonyC = { e,8 <d\5 gis\4 b\3> r <d\5 gis\4 b\3> e, <d\5 gis\4> r <d\5 gis\4> }
 eHarmonyD = { e8\5 <d'\3 g'\2> r <d'\3 g'\2> }
 dWalkHarmony = { d8\5 <a\4 d'\3 f'\2> r <a\4 d'\3 f'\2>
                  d\5 <a\4 cis'\3 f'\2> r <a\4 cis'\3 f'\2>
                  d\5 <a\4 c'\3 f'\2> r <a\4 c'\3 f'\2>
-               }
-
+                 d\5 <f c'\3> r <f c'\3> }
+dRootWalkHarmony = { d\5 <f c'\3> r <f c'\3>
+                     c <f c'\3> r <f c'\3> }
+beHighHarmony = { b,8\6 <d'\3 f'\2> r <d'\3 f'\2>
+                  e\5   <d'\3 f'\2> r <d'\3 f'\2> }
+aWalkHarmony = { a,8 <e a> r <e a>
+                 g, <e g> r <g c'> }
+fHarmony = { f <c'\3 e'\2> r <c'\3 e'\2> }
 
 harmony = {
   \time 4/4
@@ -89,7 +95,7 @@ harmony = {
   \dHarmonyB
   \gHarmonyB
   \cHarmonyB
-  \fHarmony
+  \fmajHarmony
   \bHarmonyC
   \eHarmonyC
 
@@ -105,6 +111,16 @@ harmony = {
   \eHarmonyD \eHarmonyD
   \amajHarmony \amajHarmony
   \dWalkHarmony
+  \dRootWalkHarmony
+  \beHighHarmony
+  \aWalkHarmony
+  \fHarmony \fHarmony
+
+  \bHarmonyB \bHarmonyB
+  \eHarmonyB \eHarmonyA
+
+  \aHarmonyB \aHarmonyB
+  \bHarmonyB \eHarmonyB
 }
 
 beChords = \chordmode { b2:m7.5- e:7 } % TODO e:m7 -> e minor 7 flat 9
@@ -125,7 +141,8 @@ chordsC = \chordmode { e1:m7.5-
 chordsDWalk = \chordmode { d2:m d2:m7+
                            d1:m7 }
 chordsDRootWalk = \chordmode { d2:m7 d:m7/c }
-chordsARootWalk = \chordmode { a2:m g:m/g }
+chordsARootWalk = \chordmode { a2:m a:m/g }
+chordsF = \chordmode { f1:7 }
 
 harmonyChords = {
   \set minorChordModifier = \markup { "-" }
@@ -141,6 +158,7 @@ harmonyChords = {
   \chordsDRootWalk
   \beChords
   \chordsARootWalk
+  \chordsF
   \beChordsLong
   \chordsA
 }
