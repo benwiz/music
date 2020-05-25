@@ -7,13 +7,13 @@
   tagline = ##f
 }
 
-aMelody  = { c''2. b'8 a'8 } % one measure
-beMelody = { a'2. gis'8 b'8 } % one
-dgMelody = { a'2. g'8 b'8 } % one
+aMelody  = { c''2. b'8 a' } % one measure
+beMelody = { a'2. gis'8 b' } % one
+dgMelody = { a'2. g'8 b' } % one
 abeMelody = { e'1( e'2.) e'4 } % two
 caMelody = { e'1\2( e'2\2) r8 e'\2 f'\2 g'\2 } % two
 dMelody  = { a'4. d'8 d'2 } % one
-gMelody  = { r2 r8 d'8 e'8\2 f'8\2 } % one
+gMelody  = { r2 r8 d' e'\2 f'\2 } % one
 cMelody  = { g'4. c'8 c'2 } % one
 fMelody  = { r2 r8 c' d' e' } % one
 bMelody  = { f'4. b8 b2 } % one
