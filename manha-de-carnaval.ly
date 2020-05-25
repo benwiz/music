@@ -78,6 +78,7 @@ harmony = {
 }
 
 chordsA = \chordmode { a1:m7 b2:m7.5- e2:7 }
+%% FIXME e:m9 is minor 7 major 9, really needs to be minor 7 minor (flat) 9
 chordsC = \chordmode { a1:m7 d2:m7 g2:7 c1:maj7 cis2:dim7 a2:7 d1:m7 g1:7 c1:6 f1:maj7 b:m7.5- e:m9 }
 
 harmonyChords = {
