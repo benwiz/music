@@ -19,7 +19,7 @@ fmajMelody  = { r2 r8 c' d' e' } % one
 bMelody  = { f'4. b8 b2 } % one
 eMelody  = { r2 r8 b\3 cis'\3 d'\3 }
 eadMelody = { ais'2. a'8 g'8\2
-              g2'\2 r8 r f'\2 e'\2
+              g'2\2 r8 r f'\2 e'\2
               a'1
               r2 r4 d'4}
 dWalkMelody = { d'2. e'8\2 f'8\2 }
@@ -29,7 +29,13 @@ fMelody = { a'2. gis'4 }
 beMelodyB = { e'1
               r2 e'4 gis'8 b'8 }
 aEndMelody = { a'1 }
-beEndMelody = { r2. e'4 }
+beEndMelody = { r2 r4 e' }
+codaMelody = { r2 r4 a'8 b'
+               c''4 d''8 c'' b'4 a'8 b'
+               c''4 d''8 c'' b'4 a'8 b'
+               c''4 d''8 c'' b'4 a'8\2 g'\2
+               a'1
+               ( a'2.) r4 }
 
 melody = {
   \time 4/4
@@ -67,6 +73,8 @@ melody = {
   \aEndMelody
   \beEndMelody
 
+  \codaMelody
+
 }
 
 aHarmonyA = { a,8\6 <c'\3 e'\2> r <c'\3 e'\2> }
@@ -100,6 +108,12 @@ beHighHarmony = { b,8\6 <d'\3 f'\2> r <d'\3 f'\2>
 aWalkHarmony = { a,8 <e a> r <e a>
                  g, <e g> r <g c'> }
 fHarmony = { f <c'\3 e'\2> r <c'\3 e'\2> }
+codaHarmony = { \aHarmonyB a,2\6
+                <d d'\3 f'\2> <a, c'\3 e'\2>
+                <d d'\3 f'\2> <a, c'\3 e'\2>
+                <d d'\3 f'\2> <e\5 d'\3 g'\2>
+                <a, fis c'\3 e'\2>1
+                ( <a, fis c'\3 e'\2>2.) r4 }
 
 harmony = {
   \time 4/4
@@ -143,7 +157,26 @@ harmony = {
   \eHarmonyB \eHarmonyA
 
   \aHarmonyB \aHarmonyB
+
+  \once \override Score.RehearsalMark.font-size = #2
+  \mark \markup { \musicglyph #"scripts.coda" }
+
   \bHarmonyB \eHarmonyB
+
+  %% TODO ds al coda
+  %% This is what actually says "D.S. al Code", it's the key
+  %% \once \override TextScript.extra-offset = #'( 0 . -3.0 )
+  %% \once \override TextScript.word-space = #1.5
+  %% <>^\markup { \center-column { "D.S. al Coda" \line { \musicglyph #"scripts.coda" \musicglyph #"scripts.tenuto" \musicglyph #"scripts.coda" } } }
+
+  \bar "||" \break
+
+  \once \override Score.RehearsalMark.font-size = #2
+  \mark \markup { \musicglyph #"scripts.coda" }
+
+  \codaHarmony
+
+  \bar "|."
 }
 
 beChords = \chordmode { b2:m7.5- e:7 } % TODO e:m7 -> e minor 7 flat 9
