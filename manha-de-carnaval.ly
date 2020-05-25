@@ -10,7 +10,7 @@
 aMelody  = { c''2. b'8 a'8 } % one measure
 beMelody = { a'2. gis'8 b'8 } % one
 dgMelody = { a'2. g'8 b'8 } % one
-abMelody = { e'1( e'2.) e'4 } % two
+abeMelody = { e'1( e'2.) e'4 } % two
 caMelody = { e'1\2( e'2\2 e'8\2) e'8\2 f'8\2 g'8\2 } % two
 dMelody  = { a'4. d'8 d'2 } % one
 gMelody  = { r2 r8 d'8 e'8\2 f'8\2 } % one
@@ -25,7 +25,9 @@ melody = {
   \partial 4 e'4\2
   \aMelody
   \beMelody
-  \abMelody
+
+  \abeMelody
+
   \aMelody
   \dgMelody
   \caMelody
@@ -35,6 +37,13 @@ melody = {
   \fMelody
   \bMelody
   \eMelody
+
+  \abeMelody
+
+  \aMelody
+  \beMelody
+
+  \abeMelody
 }
 
 aHarmonyA = { a,8\6 <c'\3 e'\2> r <c'\3 e'\2> }
@@ -63,8 +72,10 @@ harmony = {
   \partial 4 r4
   \aHarmonyA \aHarmonyA
   \bHarmonyA \eHarmonyA
+
   \aHarmonyB \aHarmonyB
-  \bHarmonyB \eHarmonyB % \break
+  \bHarmonyB \eHarmonyB
+
   \aHarmonyA \aHarmonyA
   \dHarmony \gHarmony
   \cHarmony \cHarmony
@@ -75,6 +86,15 @@ harmony = {
   \fHarmony
   \bHarmonyC
   \eHarmonyC
+
+  \aHarmonyB \aHarmonyB
+  \bHarmonyB \eHarmonyB
+
+  \aHarmonyA \aHarmonyA
+  \bHarmonyA \eHarmonyA
+
+  \aHarmonyB \aHarmonyB
+  \bHarmonyB \eHarmonyB
 }
 
 chordsA = \chordmode { a1:m7 b2:m7.5- e2:7 }
@@ -87,6 +107,9 @@ harmonyChords = {
   \chordsA
   \chordsA
   \chordsC
+  \chordsA
+  \chordsA
+  \chordsA
 }
 
 
