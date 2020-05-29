@@ -158,19 +158,18 @@ harmony = {
 
   \aHarmonyB \aHarmonyB
 
+  \once \override Score.RehearsalMark.extra-offset = #'( 0 . 1 )
   \once \override Score.RehearsalMark.font-size = #2
   \mark \markup { \musicglyph #"scripts.coda" }
 
-  \bHarmonyB \eHarmonyB
+  \once \override TextScript.extra-offset = #'( 6.0 . 6.0 )
+  <>^\markup { \center-column { "D.S. al Coda" } }
 
-  %% TODO ds al coda
-  %% This is what actually says "D.S. al Code", it's the key
-  %% \once \override TextScript.extra-offset = #'( 0 . -3.0 )
-  %% \once \override TextScript.word-space = #1.5
-  %% <>^\markup { \center-column { "D.S. al Coda" \line { \musicglyph #"scripts.coda" \musicglyph #"scripts.tenuto" \musicglyph #"scripts.coda" } } }
+  \bHarmonyB \eHarmonyB
 
   \bar "||" \break
 
+  \once \override Score.RehearsalMark.extra-offset = #'( 0 . 6 )
   \once \override Score.RehearsalMark.font-size = #2
   \mark \markup { \musicglyph #"scripts.coda" }
 
