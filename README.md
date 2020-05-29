@@ -19,3 +19,7 @@ Configure Emacs
 ```
 
 I have a custom compilation function bound to `C-c C-k` but the built in is bound to `C-c C-l` or `M-x LilyPond-command-lilypond`.
+
+## To Do
+
+- Can code be shared between multiple lilypond files?
