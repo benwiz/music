@@ -2,6 +2,7 @@
 
 \header {
   title = "Manhã de Carnaval"
+  subtitle = "Samba"
   composer = "Composed by Luiz Bonfá"
   arranger = "Arranged by Ben Wisialowski"
   tagline = ##f
