@@ -92,15 +92,20 @@ aHarmonyB = { <c'\3 e'\2>8 % pickup
               a,4\6 <g c'\3 e'\2> }
 bHarmonyB = { <b, a d'>4 <f a d'> }
 eHarmonyB = { \eHarmonyA }
-%%%%%%%%% left off here
-dHarmony = { d8\5 <c'\3 f'\2> r <c'\3 f'\2> }
-gHarmony = { g,8 <b\3 d'\2> r <b\3 d'\2> }
-cHarmony = { c8 <g\4 b\3> r <g\4 b\3> }
-cisHarmony = { cis8 <g\4 b\3> r <g\4 b\3> }
-amajHarmony = { a,8\6 <g\4 cis'\3> r <g\4 cis'\3> }
-dHarmonyB = { d8\5 <c'\3 f'\2> r r d8\5 <f\4 c'\3> r <f\4 c'\3> }
-gHarmonyB = { g,8 <f b\3 d'\2> r <f b\3 d'\2> g,8 <f b\3> r <f b\3> }
-cHarmonyB = { c8 <e g> r r c <e a> r <e a> }
+
+dHarmony = { <d\5 c'\3 f'\2>4 <c'\3 f'\2> }
+gHarmony = { g,8 <b\3 d'\2> r } % left off next pickup
+cHarmony = { <g\4 b\3>8 % pickup
+             c <g\4 b\3> r <g\4 b\3>
+             c4 <g\4 b\3> }
+cisHarmony = { <cis g\4 b\3>4 <g\4 b\3> }
+amajHarmony = { a,8\6 <g\4 cis'\3> r } % left off next pickup
+dHarmonyB = { <a\4 c'\3>8 % pickup
+              d\5 <c'\3 f'\2> r r d4\5 <f\4 c'\3> } % abnormal rest due to playability
+gHarmonyB = { <g, f b\3 d'\2>4 <f b\3 d'\2> g,8 <f b\3> r } % left off next pickup
+cHarmonyB = { r8 % <e g> % pickup
+              c <e g> r r c4 <e a> } % absnormal rest due to playability
+%% Left off here
 fmajHarmony = { f,8 <e a c'> r <e a c'> f, <d a> r <a c'> }
 bHarmonyC = { b,8 <f a> r r b,8 <f a> r <f a> }
 eHarmonyC = { e,8 <d\5 gis\4 b\3> r <d\5 gis\4 b\3> e, <d\5 gis\4> r <d\5 gis\4> }
@@ -135,7 +140,7 @@ harmony = {
 
   \aHarmonyA
   \dHarmony \gHarmony
-  \cHarmony \cHarmony
+  \cHarmony
   \cisHarmony \amajHarmony
   \dHarmonyB
   \gHarmonyB
