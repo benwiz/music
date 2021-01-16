@@ -18,7 +18,7 @@ main = {
   \time 3/4
   <g\5 b'>4 \tuplet 3/1 { d'\3 fis'\2( g'\2) } b'
   <d b a'>2.
-  \harmonicsOn
+  \harmonicsOn	 
   <a d' fis' b'>2. 
   \harmonicsOff
   <b\4 b'\1>8 d'\3 fis'\2 d'\3 b'\1 fis'\2
@@ -31,27 +31,29 @@ main = {
   <d\5 fis'\2> <cis\5 e'\2> <b, d'>
   <g, e'> b e'
   <a, e'\2>8( d') cis'4 d'
-  <fis, d'>8 d d' a e' d'
-  fis'16( g' fis' e') <dis fis'>8 a b fis'
-  % TODO not sure about timing next two measures, basically all the timing is not quite right
-  b2 <b, b>8 <g, e'>8
-  <fis, fis'> <e, g'> e g b g
+  <fis, d'>8 d d' a d' a % not sure about this
+  e'4 d' fis'16( g' fis' e')
+  <dis fis'>4 a8 b fis' b(
+  b4) <b, b>4 <g, e'>8 <fis, fis'> 
+  <e, g'> e b g b g % not sure about this
   <e, g'>8( fis') <gis, fis'>( e') d' e'
-  % TODO not sure about timing
-  <a, cis'> g d'4 \harmonicsOn <g'\3 e''\1>( <g'\3 e''\1>2.) \harmonicsOff
+  <a, cis'>4 g d'
+  \harmonicsOn <g'\3 e''\1>2. \harmonicsOff
   a16( b\3 a g fis e d8 cis16 b, a,8)
-  d4 <d' fis'>8 <e' g'> a'16( b' a'8) % TODO not sure about timing
+  d4 <d' fis'>8 <e' g'> a'16( b' a'8)
   <b, d'>8 g d' e' d'4 % timing
-  d4 <d' fis'>8 <e' g'> <fis'\2 a'\1> b'16( cis'' b'8) % timing
-  <a, cis'>8 g d' \glissando e'4\2 % timing
+  d4 <d' fis'>8 <e' g'> <fis'\2 a'\1> b'16( cis'' b'8)
+  <a, cis'>8 g d' \glissando e'4\2
   <d a'>8( g') g' \glissando fis' fis'( e')
   <cis fis'>8( e') d' e' d' \glissando e'\2
-  <b, d'>8 cis'16( b d' \glissando e'\2) <a, cis'>8 g d'
-  <fis, d'>8 a d b, <e, g'>( fis')
+  <b, d'>8 e' <a, cis'> <b d'> d' \glissando e'\2
+  <a, cis'>4 g d'
+  <fis, d'>4 a d b, <e, g'>( fis')
   <gis, fis'>( e')  
   \harmonicsOn
-  <a d' fis' b'>2
+  <a d' fis' b'>
   \harmonicsOff
+  \bar "|."
 }
 
 harmonyChords = \chordmode {
@@ -90,9 +92,9 @@ harmonyChords = \chordmode {
 
 \paper {
   system-system-spacing =
-    #'((basic-distance . 12) 
+    #'((basic-distance . 8)
        (minimum-distance . 8)
-       (padding . 10)
+       (padding . 6)
        (stretchability . 60)) 
 }
 
