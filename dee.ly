@@ -42,8 +42,8 @@ main = {
   a16( b\3 a g fis e d8 cis16 b, a,8)
   d4 <d' fis'>8 <e' g'> a'16( b' a'8)
   <b, d'>8 g d' e' d'4 % timing
-  d4 <d' fis'>8 <e' g'> <fis'\2 a'\1> b'16( cis'' b'8)
-  <a, cis'>8 g d' \glissando e'4\2
+  d8 <d' fis'> <e' g'> <fis'\2 a'\1> b'16( cis'' b'8.)
+  <a, cis'>8 g d' \glissando e'8\2( e'4\2)
   <d a'>8( g') g' \glissando fis' fis'( e')
   <cis fis'>8( e') d' e' d' \glissando e'\2
   <b, d'>8 e' <a, cis'> <b d'> d' \glissando e'\2
@@ -66,28 +66,31 @@ harmonyChords = \chordmode {
   a2./cis
   a2./cis
   g2.:maj7
-  d2.
+  d2./fis
   a2.:7/e
   d4 cis:dim g/b
   g2.
   a2.
   d2.:6/fis
-  b1:7/dis
-  g2
-  g2.:maj7.6
-  e2. % e minor? e major?
-  a2
-  g1:6
   d2.
+  d2.:6/ees % also flat 9 but didn't figure out how to write it. Calling this a D may be a stretch but it makes more sense than a B major dominant 7
+  g2.:maj7
+  g2.:6/e %
+  g2.:maj7
+  a2.
+  g2.:6
+  a2.
   d2.
   g2.:6/b
   d2.
   a2.
   d2.
-  d2.:maj7.9/cis
-  g2/b a4
-  d2/fis a4:maj7
-  a4:maj7 d:6/a  
+  d2./cis
+  g4/b a2
+  a2.
+  d2./fis
+  d2. % idk about this
+  d2.
 }
 
 \paper {
