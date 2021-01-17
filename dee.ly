@@ -95,9 +95,9 @@ harmonyChords = \chordmode {
 
 \paper {
   system-system-spacing =
-    #'((basic-distance . 8)
+    #'((basic-distance . 12)
        (minimum-distance . 8)
-       (padding . 6)
+       (padding . 10)
        (stretchability . 60)) 
 }
 
